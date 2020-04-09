@@ -7,10 +7,12 @@
       <span class="iconfont icon-search">&#xe632;</span>
       输入城市/景点/游玩/主题
     </div>
-    <div class="header-right">
-      {{ city }}
-      <span class="iconfont icon-arrow-down">&#xe62f;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{ city }}
+        <span class="iconfont icon-arrow-down">&#xe62f;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -27,7 +29,8 @@ export default {
   @import '~styles/varibies.styl'
   .header
     display flex
-    line-height .86rem
+    height $headerHeight
+    line-height $headerHeight
     background $bgColor
     color #fff
     .header-left
@@ -36,13 +39,11 @@ export default {
       .icon-back
         text-align center
         font-size .4rem
-        margin-left .12rem
     .header-input
       flex 1
       height .64rem
       line-height .64rem
       margin-top .12rem
-      margin-left .12rem
       background #fff
       border-radius .1rem
       color #ccc
@@ -51,6 +52,7 @@ export default {
       width 1.24rem
       float right
       text-align center
+      color #fff
       .icon-arrow-down
         margin-left -.04rem
         font-size .24rem
