@@ -34,9 +34,7 @@ export default {
         .then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {
-      console.log(res)
       let data = res.data.data
-      console.log(data)
       this.hotCities = data.hotCities
       this.cities = data.cities
     },

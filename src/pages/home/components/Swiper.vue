@@ -23,7 +23,6 @@ export default {
         },
         loop: true,
         autoplay: true
-        // Some Swiper option/callback...
       }
     }
   },
