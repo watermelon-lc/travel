@@ -41,7 +41,7 @@ export default {
         }
         this.timer = setTimeout(() => {
           let touchY = e.touches[0].clientY - 79
-          let index = Math.floor((touchY - this.startY) / 20)
+          let index = Math.floor((touchY - this.startY) / 21.8)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
