@@ -6,19 +6,22 @@
         <div class="banner-title">{{ bannerInfo.sightName }}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe733;</span>
-          10
+          2
         </div>
       </div>
     </div>
-    <CommonGallary :imgs="bannerInfo.gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></CommonGallary>
+    <FadeAnimation>
+      <CommonGallary :imgs="bannerInfo.gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></CommonGallary>
+    </FadeAnimation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary.vue'
+import FadeAnimation from 'common/fade/FadeAnimation.vue'
 export default {
   name: 'DetailBanner',
-  components: { CommonGallary },
+  components: { CommonGallary, FadeAnimation },
   props: {
     bannerInfo: Object
   },
